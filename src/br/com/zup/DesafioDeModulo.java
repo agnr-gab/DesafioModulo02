@@ -25,14 +25,17 @@ public class DesafioDeModulo {
         System.out.println("Insira o nome do funcionario:");
         nome = leitorFuncionarios.nextLine();
         System.out.println("Insira o telefone do funcionario:");
-        telefone= leitorFuncionarios.next();
+        telefone = leitorFuncionarios.next();
         System.out.println("Insira o e-mail do funcionario:");
         email = leitorFuncionarios.next();
         System.out.println("Insira o CPF do funcionario:");
-        email = leitorFuncionarios.next();
+        cpf = leitorFuncionarios.next();
 
-        listaFuncionarios.put("cpf", nome+telefone+email+cpf);
-        System.out.println(listaFuncionarios.get(cpf));
+        listaFuncionarios.put("cpf", nome + telefone + email + cpf);
+        for (String referencia : listaFuncionarios.values()) {
+            System.out.println(referencia);
+        }
+        //System.out.println(listaFuncionarios.values(cpf));
 
 
     }

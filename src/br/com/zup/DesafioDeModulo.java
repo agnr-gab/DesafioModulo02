@@ -13,14 +13,26 @@ public class DesafioDeModulo {
         Map<String, String> listaFuncionarios = new HashMap<String, String>();
         Scanner leitorFuncionarios = new Scanner(System.in);
 
-        String chaveCadastro;
+        //Variaveis
+        //String chaveCadastro = "";
         String nome = "Nome";
         String telefone = "Tefelone123456987";
         String email = "email@email.com";
-        String cpf = "99988774456";
+        String cpf = "999887744856";
+        //chaveCadastro = leitorFuncionarios.next();
 
-        listaFuncionarios.put("chaveCadastro", nome+telefone+email+cpf);
-        System.out.println(listaFuncionarios);
+        System.out.println("-----Sistema de Cadastro de Funcionários-----");
+        System.out.println("Insira o nome do funcionario:");
+        nome = leitorFuncionarios.nextLine();
+        System.out.println("Insira o telefone do funcionario:");
+        telefone= leitorFuncionarios.next();
+        System.out.println("Insira o e-mail do funcionario:");
+        email = leitorFuncionarios.next();
+        System.out.println("Insira o CPF do funcionario:");
+        email = leitorFuncionarios.next();
+
+        listaFuncionarios.put("cpf", nome+telefone+email+cpf);
+        System.out.println(listaFuncionarios.get(cpf));
 
 
     }

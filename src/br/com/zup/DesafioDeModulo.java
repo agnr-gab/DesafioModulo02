@@ -15,28 +15,43 @@ public class DesafioDeModulo {
 
         //Variaveis
         //String chaveCadastro = "";
-        String nome = "Nome";
-        String telefone = "Tefelone123456987";
-        String email = "email@email.com";
-        String cpf = "999887744856";
+        String nome = "Maria Ferraz da Silva Souza";
+        String telefone = "55+61+999-999-999";
+        String email = "email@email.com.br";
+        String cpf = "761.350.300-35";
         //chaveCadastro = leitorFuncionarios.next();
 
         System.out.println("-----Sistema de Cadastro de Funcionários-----");
-        System.out.println("Insira o nome do funcionario:");
-        nome = leitorFuncionarios.nextLine();
-        System.out.println("Insira o telefone do funcionario:");
-        telefone = leitorFuncionarios.next();
-        System.out.println("Insira o e-mail do funcionario:");
-        email = leitorFuncionarios.next();
-        System.out.println("Insira o CPF do funcionario:");
-        cpf = leitorFuncionarios.next();
+        while (true) {
+            //Menu de opções
+            System.out.println("Para ---cadastrar--- funcionário, DIGITE 1.");
+            System.out.println("Para ---verificar--- funcionários cadastrados, DIGITE 2.");
+            System.out.println("Para ---encerrar--- o programa, DIGITE 3.");
+            int opcaoEscolhida = leitorFuncionarios.nextInt();
+            leitorFuncionarios.nextLine();
+            // Condições do programa
+            if (opcaoEscolhida == 1) {
+                System.out.println("Insira o nome do funcionario:");
+                nome = leitorFuncionarios.nextLine();
+                System.out.println("Insira o telefone do funcionario:");
+                telefone = leitorFuncionarios.nextLine();
+                System.out.println("Insira o e-mail do funcionario:");
+                email = leitorFuncionarios.nextLine();
+                System.out.println("Insira o CPF do funcionario:");
+                cpf = leitorFuncionarios.nextLine();
+                System.out.println("Cadastro realizado com sucesso:");
+            }
+            if (opcaoEscolhida == 2) {
+                listaFuncionarios.put("cpf", "Nome: " + nome + "___" + "Telefone: " + telefone + "___" + "E-mail: " + email + "___" + "CPF: " + cpf);
+                for (String referencia : listaFuncionarios.values()) {
 
-        listaFuncionarios.put("cpf", "Nome: "+nome+"\n"+"Telefone: "+telefone+"\n"+"E-mail: "+email+"\n"+"CPF: "+cpf);
-        for (String referencia : listaFuncionarios.values()) {
-            System.out.println(referencia);
+                    System.out.println(referencia);
+                }
+            }
+            if (opcaoEscolhida == 3) {
+                break;
+            }
         }
-        //System.out.println(listaFuncionarios.values(cpf));
-
 
     }
 }

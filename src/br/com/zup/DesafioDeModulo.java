@@ -13,6 +13,14 @@ public class DesafioDeModulo {
         Map<String, String> listaFuncionarios = new HashMap<String, String>();
         Scanner leitorFuncionarios = new Scanner(System.in);
 
+        String chaveCadastro;
+        String nome = "Nome";
+        String telefone = "Tefelone123456987";
+        String email = "email@email.com";
+        String cpf = "99988774456";
+
+        listaFuncionarios.put("chaveCadastro", nome+telefone+email+cpf);
+        System.out.println(listaFuncionarios);
 
 
     }

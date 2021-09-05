@@ -31,7 +31,7 @@ public class DesafioDeModulo {
         System.out.println("Insira o CPF do funcionario:");
         cpf = leitorFuncionarios.next();
 
-        listaFuncionarios.put("cpf", nome + telefone + email + cpf);
+        listaFuncionarios.put("cpf", "Nome: "+nome+"\n"+"Telefone: "+telefone+"\n"+"E-mail: "+email+"\n"+"CPF: "+cpf);
         for (String referencia : listaFuncionarios.values()) {
             System.out.println(referencia);
         }

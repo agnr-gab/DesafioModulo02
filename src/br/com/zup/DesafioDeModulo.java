@@ -19,7 +19,7 @@ public class DesafioDeModulo {
         String telefone = "55+61+999-999-999";
         String email = "email@email.com.br";
         String cpf = "761.350.300-35";
-        //chaveCadastro = leitorFuncionarios.next();
+        // String chaveCadastro = leitorFuncionarios.next();
 
         System.out.println("-----Sistema de Cadastro de Funcionários-----");
         while (true) {
@@ -42,16 +42,16 @@ public class DesafioDeModulo {
                 System.out.println("Cadastro realizado com sucesso:");
             }
             if (opcaoEscolhida == 2) {
-                listaFuncionarios.put("cpf", "Nome: " + nome + "___" + "Telefone: " + telefone + "___" + "E-mail: " + email + "___" + "CPF: " + cpf);
-                for (String referencia : listaFuncionarios.values()) {
-
-                    System.out.println(referencia);
-                }
+                System.out.println("Funcionários já cadastrados: ");
+                listaFuncionarios.put("CPF: " + cpf, " | " + "Nome: " + nome + " | " + "Telefone: " + telefone + " | " + "E-mail: " + email + "\n");
+                System.out.println(listaFuncionarios);
+                System.out.print("\n");
             }
             if (opcaoEscolhida == 3) {
                 break;
             }
         }
-
     }
+
 }
+

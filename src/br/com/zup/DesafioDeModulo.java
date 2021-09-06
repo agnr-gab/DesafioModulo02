@@ -26,7 +26,8 @@ public class DesafioDeModulo {
             //Menu de opções
             System.out.println("Para ---cadastrar--- funcionário, DIGITE 1.");
             System.out.println("Para ---verificar--- funcionários cadastrados, DIGITE 2.");
-            System.out.println("Para ---encerrar--- o programa, DIGITE 3.");
+            System.out.println("Para ---excluir--- algum funcionario cadastrado, DIGITE 3.");
+            System.out.println("Para ---encerrar--- o programa, DIGITE 4.");
             int opcaoEscolhida = leitorFuncionarios.nextInt();
             leitorFuncionarios.nextLine();
             // Condições do programa
@@ -47,9 +48,16 @@ public class DesafioDeModulo {
                 System.out.println(listaFuncionarios);
                 System.out.print("\n");
             }
-            if (opcaoEscolhida == 3) {
-                break;
+
+            if (listaFuncionarios.containsValue(cpf)) {
+                System.out.println("Usuário já consta cadastrado!");
             }
+            if (opcaoEscolhida == 4) {
+                break;
+
+
+            }
+
         }
     }
 

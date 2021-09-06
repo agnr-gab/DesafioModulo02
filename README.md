@@ -6,7 +6,7 @@
 
 No final do programa deve ser exibida a lista de funcionários cadastrados. 
 
-**Entrega Mínima:** O sistema permite, via terminal, inserir pelo menos 1 funcionário em uma lista e retornar o mesmo na tela. 
+ **Entrega Mínima:** O sistema permite, via terminal, inserir pelo menos 1 funcionário em uma lista e retornar o mesmo na tela. 
 
 **Entrega Média:** O sistema permite adicionar mais de um funcionário e apresenta um menu para decidir se deverá: 
 1. Adicionar mais funcionários. 
@@ -14,3 +14,8 @@ No final do programa deve ser exibida a lista de funcionários cadastrados.
 3. Encerrar o programa. 
 
 **Entrega Máxima:** O Sistema permite excluir um funcionário usando como parâmetro o CPF e não permite inserir um funcionário com o CPF repetido. 
+
+## **Andamento**:
+
+ - [x] Entrega Mínima
+ - [x] Entrega Média

@@ -26,8 +26,7 @@ public class DesafioDeModulo {
             //Menu de opções
             System.out.println("Para ---cadastrar--- funcionário, DIGITE 1.");
             System.out.println("Para ---verificar--- funcionários cadastrados, DIGITE 2.");
-            System.out.println("Para ---excluir--- algum funcionário cadastrado, DIGITE 3.");
-            System.out.println("Para ---encerrar--- o programa, DIGITE 4.");
+            System.out.println("Para ---encerrar--- o programa, DIGITE 3.");
             int opcaoEscolhida = leitorFuncionarios.nextInt(); //opção escolhida pelo usuário
             leitorFuncionarios.nextLine(); //limpar o buffer
             // Condições do programa
@@ -49,22 +48,12 @@ public class DesafioDeModulo {
                 listaFuncionarios.put(cpf, " | " + "Nome: " + nome + " | " + "Telefone: " + telefone + " | " + "E-mail: " + email + "\n");
                 System.out.println(listaFuncionarios);
                 System.out.print("\n"); //saltar uma linha
-            } //remove funcionário do cadastro
-            if (opcaoEscolhida == 3) {
-                System.out.println("Digite o CPF do funcionário para excluir o cadastro:");
-                String cpfDeletado = leitorFuncionarios.next();
-                for (String verificaCpf:listaFuncionarios.keySet()) {
-                    if (verificaCpf.equals(cpfDeletado)) {
-
-                    }
-                }
-                listaFuncionarios.remove(cpfDeletado);
-                System.out.println("Funcionário " + cpfDeletado + " removido do cadastro com sucesso!");
-            }//entrada inválida
-            if (opcaoEscolhida > 4 || opcaoEscolhida < 1) {
+            }
+            //entrada inválida
+            if (opcaoEscolhida > 3 || opcaoEscolhida < 1) {
                 System.out.println("Opção de entrada inválida. Verifique novamente!");//finaliza o programa
             }
-            if (opcaoEscolhida == 4) {
+            if (opcaoEscolhida == 3) {
                 break;
 
             }

@@ -29,39 +29,37 @@ public class DesafioDeModulo {
             System.out.println("Para ---excluir--- algum funcionário cadastrado, DIGITE 3.");
             System.out.println("Para ---encerrar--- o programa, DIGITE 4.");
             int opcaoEscolhida = leitorFuncionarios.nextInt(); //opção escolhida pelo usuário
-            leitorFuncionarios.nextLine();
+            leitorFuncionarios.nextLine(); //limpar o buffer
             // Condições do programa
             // Cadastro dos funcionários
             if (opcaoEscolhida == 1) {
                 System.out.println("Insira o nome do funcionario:");
-                nome = leitorFuncionarios.nextLine();
+                 nome = leitorFuncionarios.nextLine();
                 System.out.println("Insira o telefone do funcionario:");
-                telefone = leitorFuncionarios.nextLine();
+               telefone = leitorFuncionarios.nextLine();
                 System.out.println("Insira o e-mail do funcionario:");
                 email = leitorFuncionarios.nextLine();
                 System.out.println("Insira o CPF do funcionario:");
                 cpf = leitorFuncionarios.nextLine();
                 System.out.println("Cadastro realizado com sucesso!!!");
-            } while (listaFuncionarios.containsKey(cpf)) {
-                System.out.println("Usuário já consta cadastrado! Digite um novo CPF: ");
-                cpf = leitorFuncionarios.nextLine();
             }
-            //verifica se tem cpf igual na base de dados
-            /*if (listaFuncionarios.containsValue(cpf)) {
-                System.out.println("Usuário já consta cadastrado!");
-            }*/
             //lista de funcionários cadastrados
             if (opcaoEscolhida == 2) {
                 System.out.println("Lista de funcionários já cadastrados: ");
-                listaFuncionarios.put("CPF: " + cpf, " | " + "Nome: " + nome + " | " + "Telefone: " + telefone + " | " + "E-mail: " + email + "\n");
+                listaFuncionarios.put(cpf, " | " + "Nome: " + nome + " | " + "Telefone: " + telefone + " | " + "E-mail: " + email + "\n");
                 System.out.println(listaFuncionarios);
                 System.out.print("\n"); //saltar uma linha
             } //remove funcionário do cadastro
             if (opcaoEscolhida == 3) {
                 System.out.println("Digite o CPF do funcionário para excluir o cadastro:");
-                cpf = leitorFuncionarios.next();
-                listaFuncionarios.remove(cpf);
-                System.out.println("Funcionário " + cpf + " removido do cadastro com sucesso!");
+                String cpfDeletado = leitorFuncionarios.next();
+                for (String verificaCpf:listaFuncionarios.keySet()) {
+                    if (verificaCpf.equals(cpfDeletado)) {
+
+                    }
+                }
+                listaFuncionarios.remove(cpfDeletado);
+                System.out.println("Funcionário " + cpfDeletado + " removido do cadastro com sucesso!");
             }//entrada inválida
             if (opcaoEscolhida > 4 || opcaoEscolhida < 1) {
                 System.out.println("Opção de entrada inválida. Verifique novamente!");//finaliza o programa
@@ -73,5 +71,6 @@ public class DesafioDeModulo {
         }
     }
 }
+
 
 

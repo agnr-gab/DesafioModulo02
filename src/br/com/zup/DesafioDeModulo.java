@@ -30,36 +30,33 @@ public class DesafioDeModulo {
             int opcaoEscolhida = leitorFuncionarios.nextInt(); //opção escolhida pelo usuário
             leitorFuncionarios.nextLine(); //limpar o buffer
             // Condições do programa
-            // Cadastro dos funcionários
+            // Exibirá formulário de cadastro dos funcionários (opção 1)
             if (opcaoEscolhida == 1) {
                 System.out.println("Insira o nome do funcionario:");
-                 nome = leitorFuncionarios.nextLine();
+                nome = leitorFuncionarios.nextLine();
                 System.out.println("Insira o telefone do funcionario:");
-               telefone = leitorFuncionarios.nextLine();
+                telefone = leitorFuncionarios.nextLine();
                 System.out.println("Insira o e-mail do funcionario:");
                 email = leitorFuncionarios.nextLine();
                 System.out.println("Insira o CPF do funcionario:");
                 cpf = leitorFuncionarios.nextLine();
                 System.out.println("Cadastro realizado com sucesso!!!");
             }
-            //lista de funcionários cadastrados
+            //Exibirá a lista dos funcionários previamente cadastrados (opção 2)
             if (opcaoEscolhida == 2) {
                 System.out.println("Lista de funcionários já cadastrados: ");
                 listaFuncionarios.put(cpf, " | " + "Nome: " + nome + " | " + "Telefone: " + telefone + " | " + "E-mail: " + email + "\n");
                 System.out.println(listaFuncionarios);
                 System.out.print("\n"); //saltar uma linha
             }
-            //entrada inválida
+            //Exibirá mensagem de erro caso o usuário digite uma opção inválida de menu
             if (opcaoEscolhida > 3 || opcaoEscolhida < 1) {
                 System.out.println("Opção de entrada inválida. Verifique novamente!");//finaliza o programa
             }
+            //Programa é finalizado quando usuário digita a opção 3
             if (opcaoEscolhida == 3) {
                 break;
-
             }
         }
     }
 }
-
-
-

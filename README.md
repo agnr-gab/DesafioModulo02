@@ -15,7 +15,7 @@ No final do programa deve ser exibida a lista de funcionários cadastrados.
 
 **Entrega Máxima:** O Sistema permite excluir um funcionário usando como parâmetro o CPF e não permite inserir um funcionário com o CPF repetido. 
 
-## **Andamento**:
+## **Conclusão**:
 
  - [x] Entrega Mínima
  - [x] Entrega Média
